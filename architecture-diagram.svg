@@ -1,0 +1,199 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Component gradient -->
+    <linearGradient id="componentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a47a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c63ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a6f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Process gradient -->
+    <linearGradient id="processGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#44a3aa;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" filter="url(#glow)">
+    SVG to PowerPoint Converter Architecture
+  </text>
+  
+  <text x="600" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#b0b0b0">
+    MCP-based Tool for Converting SVG Files to PPTX Presentations
+  </text>
+  
+  <!-- Main flow components -->
+  
+  <!-- Claude Code -->
+  <g transform="translate(100, 200)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="url(#componentGradient)" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Claude Code</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0">User Interface</text>
+  </g>
+  
+  <!-- MCP Protocol -->
+  <g transform="translate(400, 200)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="url(#processGradient)" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">MCP Protocol</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0">Communication Layer</text>
+  </g>
+  
+  <!-- SVG-PPTX Server -->
+  <g transform="translate(700, 200)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="url(#accentGradient)" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">SVG-PPTX Server</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0">Node.js + TypeScript</text>
+  </g>
+  
+  <!-- Arrows connecting main components -->
+  <g stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M 300 240 L 400 240" marker-end="url(#arrowhead)"/>
+    <path d="M 600 240 L 700 240" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#ffffff">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+  
+  <!-- Detailed components below -->
+  
+  <!-- Request Handler -->
+  <g transform="translate(650, 340)">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#2d2d44" stroke="#6c63ff" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Request Handler</text>
+    <text x="150" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">index.ts - MCP Server Implementation</text>
+  </g>
+  
+  <!-- PPTX Handler -->
+  <g transform="translate(650, 420)">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#2d2d44" stroke="#6c63ff" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">PPTX Handler</text>
+    <text x="150" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">pptx-handler.ts - Conversion Logic</text>
+  </g>
+  
+  <!-- PowerShell Script -->
+  <g transform="translate(650, 500)">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#2d2d44" stroke="#4ecdc4" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">PowerShell Script</text>
+    <text x="150" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Dynamic Script Generation</text>
+  </g>
+  
+  <!-- PowerPoint COM -->
+  <g transform="translate(650, 580)">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="#2d2d44" stroke="#ff6b6b" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">PowerPoint COM</text>
+    <text x="150" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Windows COM Automation</text>
+  </g>
+  
+  <!-- Vertical arrows -->
+  <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="5,5">
+    <path d="M 800 280 L 800 340" marker-end="url(#arrowhead)"/>
+    <path d="M 800 400 L 800 420" marker-end="url(#arrowhead)"/>
+    <path d="M 800 480 L 800 500" marker-end="url(#arrowhead)"/>
+    <path d="M 800 560 L 800 580" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Process Flow -->
+  <g transform="translate(100, 380)">
+    <rect x="0" y="0" width="480" height="200" rx="10" fill="none" stroke="#4a47a3" stroke-width="2" stroke-dasharray="10,5"/>
+    <text x="240" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6c63ff">Process Flow</text>
+    
+    <!-- Flow steps -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">1. User provides SVG file path</text>
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">2. MCP server validates inputs</text>
+    <text x="20" y="110" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">3. PowerShell script is generated</text>
+    <text x="20" y="135" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">4. PowerPoint launched via COM</text>
+    <text x="20" y="160" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">5. SVG inserted as picture (720x540)</text>
+    <text x="20" y="185" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">6. PPTX saved and path returned</text>
+  </g>
+  
+  <!-- Tech Stack -->
+  <g transform="translate(100, 620)">
+    <rect x="0" y="0" width="480" height="120" rx="10" fill="#1e1e30" stroke="#4ecdc4" stroke-width="2"/>
+    <text x="240" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4ecdc4">Technology Stack</text>
+    
+    <g transform="translate(20, 45)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">TypeScript</text>
+    </g>
+    
+    <g transform="translate(130, 45)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Node.js 18+</text>
+    </g>
+    
+    <g transform="translate(240, 45)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">MCP SDK</text>
+    </g>
+    
+    <g transform="translate(350, 45)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">PowerShell</text>
+    </g>
+    
+    <g transform="translate(75, 85)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Windows COM</text>
+    </g>
+    
+    <g transform="translate(185, 85)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">PowerPoint</text>
+    </g>
+    
+    <g transform="translate(295, 85)">
+      <rect x="0" y="0" width="100" height="30" rx="5" fill="#3a3a5a"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Jest Testing</text>
+    </g>
+  </g>
+  
+  <!-- Output indicator -->
+  <g transform="translate(1000, 580)">
+    <circle cx="50" cy="30" r="40" fill="url(#processGradient)" filter="url(#shadow)"/>
+    <text x="50" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Output</text>
+    <text x="50" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">PPTX</text>
+  </g>
+  
+  <!-- Arrow to output -->
+  <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 950 610 L 1010 610" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+    Created with SVG-PPTX Tool | MCP-based Architecture | Windows PowerPoint Integration
+  </text>
+</svg>
