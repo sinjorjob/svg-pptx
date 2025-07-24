@@ -143,8 +143,8 @@ npm run lint:fix
 
 1. **ClaudeCode** → MCPプロトコル
 2. **MCPサーバー** (`src/index.ts`) → リクエスト受信
-3. **PPTXハンドラー** (`src/pptx-handler.ts`) → PowerShellスクリプト実行
-4. **PowerShellスクリプト** (`scripts/simple_convert.ps1`) → PowerPoint COM操作
+3. **PPTXハンドラー** (`src/pptx-handler.ts`) → PowerShellスクリプト生成・実行
+4. **PowerShell** → PowerPoint COM操作
 5. **PowerPoint** → .pptxファイル生成
 
 ### 使用技術

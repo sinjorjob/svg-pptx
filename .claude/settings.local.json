@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__svg-pptx__create_pptx_slide",
+      "Bash(powershell:*)",
+      "Bash(npm run build:*)",
+      "Bash(del convert-svg.ps1)",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}
