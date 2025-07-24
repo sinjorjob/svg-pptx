@@ -69,6 +69,10 @@ svg-pptx: node C:/your/path/svg-pptx/dist/index.js - ✓ Connected
 ### ClaudeCode内でのコマンド例
 
 ```
+@スライド構成.txtに記載している情報を１枚スライドのSVG画像にした後、PPTファイルに変換して
+```
+
+```
 SVGファイル「slide.svg」をPowerPointに変換して
 ```
 
