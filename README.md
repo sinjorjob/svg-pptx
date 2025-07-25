@@ -158,36 +158,5 @@ npm run lint:fix
 - **PowerShell** - Windows PowerPoint自動化
 - **COM オブジェクト** - PowerPoint直接操作
 
-## 📚 ドキュメント
-
-| ドキュメント | 内容 |
-|-------------|------|
-| [実装ガイド](./docs/IMPLEMENTATION_GUIDE.md) | 詳細な技術実装 |
-| [エラーハンドリング](./docs/ERROR_HANDLING.md) | エラー処理戦略 |
-| [トラブルシューティング](./docs/TROUBLESHOOTING.md) | 一般的な問題の解決法 |
-| [デプロイメント](./docs/DEPLOYMENT.md) | 本番環境配布方法 |
-| [使用例](./examples/basic-usage.md) | 実践的なサンプル |
-
-## 🐛 トラブルシューティング
-
-### よくある問題
-
-1. **PowerPointが開かない**
-   - PowerPointがインストールされているか確認
-   - PowerShellの実行ポリシーを確認
-
-2. **MCPサーバーに接続できない**
-   - `npm run build` でビルドが完了しているか確認
-   - ClaudeCodeを再起動
-
-3. **権限エラー**
-   - PowerShellを管理者権限で実行
-   - ウイルス対策ソフトの除外設定を確認
-
-## 📄 ライセンス
-
-MIT License
-
----
 
 > **注意:** このツールはWindows環境でのMicrosoft PowerPoint必須です。PowerPointのCOMオブジェクトを使用してSVG→PPTX変換を行います。
